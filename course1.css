@@ -1,0 +1,234 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: RedHat;
+    src: url(RedHatDisplay-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: RedHatBold;
+    src: url(RedHatDisplay-Bold.ttf) format('truetype');
+}
+
+
+body {
+    background-image: url(pattern-background-desktop.svg);
+    background-color:hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    max-width: 360px;
+    height: 550px;
+    background-color: white;
+    margin: 35px auto 10px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-areas: "headerpic"
+    "h1"
+    "text1"
+    "plan"
+    "button1"
+    "button2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 50px 75px 0.5fr 1fr 1fr;
+}
+
+.headerpic {
+    background-image: url(illustration-hero.svg);
+    display: grid;
+    border-radius: 25px 25px 0px 0px;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+
+.h1 {
+    grid-area: h1;
+    display: grid;
+    place-items: center;
+    font-family: "RedHatBold";
+    font-size: 28px;
+    color: rgb(58, 60, 61);
+    
+}
+
+.text1 {
+    grid-area: text1;
+    display: grid;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: center;
+    color: slategray;
+    font-family: "RedHat";
+    font-size: 16px;
+}
+
+.plan {
+    grid-area: plan;
+    background-color: hsl(225, 100%, 98%);
+    display: grid;
+    margin: 0px 20px;
+    border-radius: 25px;
+}
+
+.plan img {
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+.annual {
+   margin-left: 100px;
+   margin-top: -40px;
+   font-family: "RedHatBold";
+   color: rgb(58, 60, 61);
+   font-size: 14px;
+}
+
+.price {
+    margin-left: 100px;
+    margin-top: -20px;
+    font-family: "RedHat";
+    color: slategray;
+    font-size: 14px;
+}
+
+.plan a {
+    position:relative;
+    left: 240px;
+    bottom: 35px;
+    font-family: "RedHat";
+    font-size: 13px;
+}
+
+a:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+
+.button1 button {
+    border: none;
+    background-color: hsl(245, 75%, 52%);
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 12px 70px;
+    border-radius: 10px;
+    color: white;
+    font-family: "RedHatBold";
+    font-size: 16px;
+    box-shadow: 4px 4px 3px gray;
+    width: 300px;
+    box-sizing: border-box;
+
+}
+
+.button2 button {
+    border: none;
+    background-color: hsl(225, 100%, 98%);
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-bottom: 30px;
+    -ms-transform: translate(-50%, -80%);
+    transform: translate(-50%, -80%);
+    padding: 12px 70px;
+    border-radius: 10px;
+    color: rgb(58, 60, 61);
+    font-family: "RedHatBold";
+    font-size: 14px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    opacity: 0.7;
+    box-shadow: 1px 1px 2px gray;
+}
+
+.copyright {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto 20px;
+    color: hsl(184, 100%, 22%);
+    line-height: 15px;
+    font-family: calibri;
+    font-size: 15px;
+}
+
+.cr a {
+    text-decoration: none;
+    color: hsl(31, 77%, 52%);
+}
+
+.cr a:hover {
+    color: hsl(31, 77%, 52%);
+    text-decoration: none;
+    background-color: hsl(179, 100%, 13%);
+    padding: 0px 3px;
+
+} 
+
+p {
+    text-align: center;
+}
+
+.attribution a {
+    color: aqua;
+}
